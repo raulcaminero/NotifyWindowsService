@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OBILP" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/obILP_CL.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOBILP_RegistrarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_RegistrarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_AsignarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_AsignarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_LiberarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:LiberarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_LiberarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LiberarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_NotificarMovimientoSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotificarMovimientoSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_NotificarMovimientoSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotificarMovimientoSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_CerrarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_CerrarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_LiberarSolicitudEnOnBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:LiberarSolicitudEnOnBase" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_LiberarSolicitudEnOnBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LiberarSolicitudEnOnBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_AsignacionSolicitudPorSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsignacionSolicitudPorSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_AsignacionSolicitudPorSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsignacionSolicitudPorSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_ReAsignarSolicitudEnOnBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReAsignarSolicitudEnOnBase" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_ReAsignarSolicitudEnOnBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReAsignarSolicitudEnOnBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_GetSolicitudes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolicitudes" />
+  </wsdl:message>
+  <wsdl:message name="IOBILP_GetSolicitudes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolicitudesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOBILP">
+    <wsdl:operation name="RegistrarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/RegistrarSolicitud" message="tns:IOBILP_RegistrarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/RegistrarSolicitudResponse" message="tns:IOBILP_RegistrarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/AsignarSolicitud" message="tns:IOBILP_AsignarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/AsignarSolicitudResponse" message="tns:IOBILP_AsignarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LiberarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/LiberarSolicitud" message="tns:IOBILP_LiberarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/LiberarSolicitudResponse" message="tns:IOBILP_LiberarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificarMovimientoSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/NotificarMovimientoSolicitud" message="tns:IOBILP_NotificarMovimientoSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/NotificarMovimientoSolicitudResponse" message="tns:IOBILP_NotificarMovimientoSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/CerrarSolicitud" message="tns:IOBILP_CerrarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/CerrarSolicitudResponse" message="tns:IOBILP_CerrarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LiberarSolicitudEnOnBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/LiberarSolicitudEnOnBase" message="tns:IOBILP_LiberarSolicitudEnOnBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/LiberarSolicitudEnOnBaseResponse" message="tns:IOBILP_LiberarSolicitudEnOnBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignacionSolicitudPorSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/AsignacionSolicitudPorSolicitud" message="tns:IOBILP_AsignacionSolicitudPorSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/AsignacionSolicitudPorSolicitudResponse" message="tns:IOBILP_AsignacionSolicitudPorSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAsignarSolicitudEnOnBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/ReAsignarSolicitudEnOnBase" message="tns:IOBILP_ReAsignarSolicitudEnOnBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/ReAsignarSolicitudEnOnBaseResponse" message="tns:IOBILP_ReAsignarSolicitudEnOnBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSolicitudes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOBILP/GetSolicitudes" message="tns:IOBILP_GetSolicitudes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOBILP/GetSolicitudesResponse" message="tns:IOBILP_GetSolicitudes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOBILP" type="tns:IOBILP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/RegistrarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/AsignarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LiberarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/LiberarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificarMovimientoSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/NotificarMovimientoSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/CerrarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LiberarSolicitudEnOnBase">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/LiberarSolicitudEnOnBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignacionSolicitudPorSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/AsignacionSolicitudPorSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAsignarSolicitudEnOnBase">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/ReAsignarSolicitudEnOnBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolicitudes">
+      <soap:operation soapAction="http://tempuri.org/IOBILP/GetSolicitudes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OBILP">
+    <wsdl:port name="BasicHttpBinding_IOBILP" binding="tns:BasicHttpBinding_IOBILP">
+      <soap:address location="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

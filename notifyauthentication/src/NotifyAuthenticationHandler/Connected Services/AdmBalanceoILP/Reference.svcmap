@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f61da295-56c0-4306-a0fe-aa3a45aaac9a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdmBalanceoILP/wsOBILP.OBILP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsOBILP.xsd" MetadataType="Schema" ID="39e3ed21-c540-4822-81d5-4ea8dd364b10" SourceId="1" SourceUrl="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsOBILP1.xsd" MetadataType="Schema" ID="60dd7729-17d3-477b-bf19-88343c91dff5" SourceId="1" SourceUrl="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsOBILP2.xsd" MetadataType="Schema" ID="ef236e4e-08b4-43a2-bbce-5f146fb91c51" SourceId="1" SourceUrl="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsOBILP.disco" MetadataType="Disco" ID="29b2f56f-e9ff-4fe3-a8b1-840cbabc5585" SourceId="1" SourceUrl="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?disco" />
+    <MetadataFile FileName="OBILP.wsdl" MetadataType="Wsdl" ID="74a62345-d80b-4c0d-ad20-3f87185c2cc3" SourceId="1" SourceUrl="http://msi/AdmBalanceoILP/wsOBILP.OBILP.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
